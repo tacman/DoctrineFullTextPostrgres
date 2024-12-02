@@ -22,11 +22,11 @@ $loader->add('Base',__DIR__.'/VertigoLabs');
 #fixtures
 $loader->add('TsVector\\Fixture',__DIR__.'/VertigoLabs');
 
-\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader([$loader,'loadClass']);
-\Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace("VertigoLabs\\DoctrineFullTextPostgres\\ORM\\Mapping\\");
+//\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader([$loader,'loadClass']);
+//\Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace("VertigoLabs\\DoctrineFullTextPostgres\\ORM\\Mapping\\");
 \Doctrine\DBAL\Types\Type::addType('tsvector',\VertigoLabs\DoctrineFullTextPostgres\DBAL\Types\TsVector::class);
 
 // auuto-loaded?
-$reader = new \Doctrine\Common\Annotations\AnnotationReader();
+//$reader = new \Doctrine\Common\Annotations\AnnotationReader();
 //$reader = new \Doctrine\Common\Annotations\CachedReader($reader,new \Doctrine\Common\Cache\ArrayCache());
-$_ENV['annotation_reader'] = $reader;
+//$_ENV['annotation_reader'] = $reader;

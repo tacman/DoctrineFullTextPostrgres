@@ -72,9 +72,9 @@ services:
   {
       /**
        * @var string
-       * @Column(name="title", type="string", nullable=false)
+       * [#Column(name:"title", type:"string", nullable:false)]
        */
-      private $title;
+      private string $title;
 
       /**
        * @var TsVector
@@ -84,9 +84,9 @@ services:
 
       /**
        * @var string
-       * @Column(name="body", type="text", nullable=true)
+       * [#Column(name:"body", type:"text", nullable:true)]
        */
-      private $body;
+      private ?string $body;
 
        /**
        * @var TsVector
